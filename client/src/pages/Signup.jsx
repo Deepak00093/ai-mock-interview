@@ -14,7 +14,7 @@ export default function Signup() {
     e.preventDefault(); 
     try {
       // Send data to our Node backend
-      const response = await axios.post('https://ai-mock-interview-hs7y.onrender.com/api/auth/signup', {
+      const response = await axios.post('https://ai-mock-interview-hs7y.onrender.com/api/auth/signup/', {
         name,
         email,
         password

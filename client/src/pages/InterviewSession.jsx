@@ -126,7 +126,7 @@ export default function InterviewSession() {
         const token = localStorage.getItem("token");
 
         await axios.post(
-          `https://ai-mock-interview-hs7y.onrender.com/api/interviews/${id}/submit`,
+          `https://ai-mock-interview-hs7y.onrender.com/api/interviews/${id}/submit/`,
           { answers: updatedAnswers },
           { headers: { Authorization: `Bearer ${token}` } },
         );
@@ -134,7 +134,7 @@ export default function InterviewSession() {
         // Step B: Tell Gemini AI to read and grade them!
         // (This might take 3-5 seconds since the AI has to think)
         await axios.post(
-          `https://ai-mock-interview-hs7y.onrender.com/api/interviews/${id}/evaluate`,
+          `https://ai-mock-interview-hs7y.onrender.com/api/interviews/${id}/evaluate/`,
           {}, // We don't need to send data, the backend already has the ID
           { headers: { Authorization: `Bearer ${token}` } },
         );

@@ -33,7 +33,7 @@ export default function InterviewSetup() {
       // 2. Ask the backend to start the interview
       // Note: I mapped config.topic to 'role' so your backend doesn't break!
       const response = await axios.post(
-        'https://ai-mock-interview-hs7y.onrender.com/api/interviews/start',
+        'https://ai-mock-interview-hs7y.onrender.com/api/interviews/start/',
         { 
           role: config.topic
         },
