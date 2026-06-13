@@ -56,7 +56,7 @@ export default function InterviewSetup() {
       console.log("STATUS:", err.response?.status);
       console.log("DATA:", err.response?.data);
 
-      alert("Could not start interview.");
+      alert(JSON.stringify(err.response?.data));
     }
   };
 
