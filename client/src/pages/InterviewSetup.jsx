@@ -33,10 +33,13 @@ export default function InterviewSetup() {
       // 1. Get the token from storage
       const token = localStorage.getItem("token");
 
+      console.log("TOKEN FOUND:", token);
+      console.log("ROLE:", config.topic);
+      console.log("HEADER:", `Bearer ${token}`);
+
       // 2. Ask the backend to start the interview
-      // Note: I mapped config.topic to 'role' so your backend doesn't break!
       const response = await axios.post(
-        "https://ai-mock-interview-hs7y.onrender.com/api/interviews/start/",
+        "https://ai-mock-interview-hs7y.onrender.com/api/interviews/start",
         {
           role: config.topic,
         },
@@ -49,7 +52,11 @@ export default function InterviewSetup() {
       });
     } catch (err) {
       console.error("Interview setup failed:", err);
-      alert("Could not start interview. Please make sure you are logged in.");
+
+      console.log("STATUS:", err.response?.status);
+      console.log("DATA:", err.response?.data);
+
+      alert("Could not start interview.");
     }
   };
 

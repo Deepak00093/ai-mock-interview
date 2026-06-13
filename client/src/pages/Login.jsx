@@ -26,8 +26,6 @@ export default function Login() {
         // Navigate only AFTER storing the token
         navigate("/dashboard");
       }
-      // Send them to the dashboard
-      navigate("/dashboard");
     } catch (err) {
       setError(err.response?.data?.message || "Invalid email or password");
     }
