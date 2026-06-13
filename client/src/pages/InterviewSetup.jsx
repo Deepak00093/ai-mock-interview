@@ -45,11 +45,9 @@ export default function InterviewSetup() {
         state: { questions: response.data.questions } 
       });
 
-    } catch (error) {
-      console.error('Error starting interview:', error);
-      alert('Could not start interview. Please make sure you are logged in.');
-      setIsCreating(false); // Turn off the loading spinner if it fails
-    }
+    } catch (err) {
+  alert("Could not start interview. Please make sure you are logged in.");
+}
   };
 
   return (
