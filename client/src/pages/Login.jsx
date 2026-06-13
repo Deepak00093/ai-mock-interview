@@ -12,7 +12,7 @@ export default function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://ai-mock-interview-hs7y.onrender.com/api/auth/login/', {
+      const response = await axios.post('https://ai-mock-interview-hs7y.onrender.com/api/auth/login', {
         email,
         password
       });

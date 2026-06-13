@@ -34,7 +34,6 @@ app.listen(PORT, () => {
 });
 
 app.use(cors({
-  origin: ["https://ai-mock-interview-lac-alpha.vercel.app"], // Your Vercel URL
-  methods: ["GET", "POST", "PUT", "DELETE"],
+  origin: ["https://ai-mock-interview-lac-alpha.vercel.app"],
   credentials: true
 }));
